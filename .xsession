@@ -9,4 +9,7 @@ fi
 
 xterm -name termbar -class termbar -T termbar -e ~/.scripts/termbar &
 
+wsconsctl mouse.tp.tapping=1
+wsconsctl mouse.reverse_scrolling=1
+
 cwm
