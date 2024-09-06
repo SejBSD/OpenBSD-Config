@@ -1,0 +1,16 @@
+!!! XTerm
+XTerm*background: black
+XTerm*foreground: rgb:9f/a2/a6
+XTerm*saveLines: 2000
+XTerm*faceName: xft:monospace:pixelsize=18
+XTerm*loginShell: true
+XTerm*scrollBar: false
+
+!!! termbar
+termbar*background: black
+termbar*foreground: rgb:9f/a2/a6
+termbar*faceName: xft:mono:pixelsize=21
+termbar*geometry: 1800x1+0+0
+termbar*saveLines: 0
+termbar*scrollBar: false
+termbar*title: termbar
