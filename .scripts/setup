@@ -1,4 +1,4 @@
-# UpgradeOS
+# Upgrade OS
 doas sysupgrade
 
 # Install patches for current version of the OS
