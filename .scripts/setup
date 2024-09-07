@@ -1,0 +1,15 @@
+# UpgradeOS
+doas sysupgrade
+
+# Install patches for current version of the OS
+doas syspatch -c
+doas syspatch
+
+# Update current packages
+doas pkg_add -u
+
+# Install web browser
+doas pkg_add chromium
+
+# Install virtualization software
+doas pkg_add virt-manager qemu
