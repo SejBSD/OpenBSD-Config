@@ -10,7 +10,7 @@ XTerm*scrollBar: true
 termbar*background: black
 termbar*foreground: rgb:9f/a2/a6
 termbar*faceName: xft:mono:pixelsize=14
-termbar*geometry: 22x42+0+0
+termbar*geometry: 34x10+0+0
 termbar*saveLines: 0
 termbar*scrollBar: false
 termbar*title: termbar

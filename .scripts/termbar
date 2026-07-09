@@ -15,7 +15,7 @@ core() {
 	MEM=$(top -n | grep Memory | awk {'print $6'})
 	SSID=$(ifconfig | grep join | sed -e 's/.*join\(.*\)chan.*/\1/')
 	IIP=$(ifconfig | awk '/^[a-z0-9]+:/ {iface=$1; sub(/:$/, "", iface)} $1 == "inet" {print iface ":" $2}')
-	BATTERY=$(apm)
+	BATTERY=$(apm | sed -n 's/^Battery state: \(.*, [0-9]\{1,3\}% remaining\),.*/\1/p')
 }
 
 tput smcup
@@ -28,9 +28,9 @@ while true; do
     BUFFER="${BUFFER}${cyanf}Desktop:${reset} [${DESKTOP_ID}]\n"
     BUFFER="${BUFFER}${cyanf}User:${reset} ${NAME}\n"
     BUFFER="${BUFFER}${cyanf}Memory:${reset} ${MEM}\n"
+    BUFFER="${BUFFER}${cyanf}Battery:${reset} ${BATTERY}"
     BUFFER="${BUFFER}${cyanf}Wi-Fi:${reset} ${SSID:-NONE}\n"
     BUFFER="${BUFFER}${cyanf}IP:${reset}\n${IIP:-down}\n"
-    BUFFER="${BUFFER}${cyanf}Battery:${reset}\n${BATTERY}"
 
     tput cup 0 0
     
