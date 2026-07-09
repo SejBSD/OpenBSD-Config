@@ -1,0 +1,3 @@
+doas sysupgrade
+doas syspatch
+doas pkg_add -u

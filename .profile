@@ -8,6 +8,3 @@ export PATH HOME TERM
 PS1='${LOGNAME}@$(hostname -s):$(pwd)$ '
 
 alias ll="ls -al"
-
-# Required by xdg-utils
-export BROWSER="chrome"   

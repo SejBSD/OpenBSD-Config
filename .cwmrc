@@ -117,8 +117,6 @@ bind-key 4-e menu-exec
 autogroup 1 "xterm,xTerm"
 
 #Apps specific keybindings
-bind-key CM-c chrome
-bind-key CM-v virt-manager
 bind-key CM-Return xterm
 bind-key 4-l "xlock -mode random"
 bind-key CM-t "xterm -e \"top -s 0.6\""
@@ -127,3 +125,12 @@ bind-key CM-t "xterm -e \"top -s 0.6\""
 bind-mouse 4-1 window-move
 bind-mouse 4-2 window-close
 bind-mouse 4-3 window-resize
+
+#Applications
+command xterm "xterm"
+command xkill "xkill"
+command xlock "xlock -mode random"
+command update "xterm -e ~/.scripts/update"
+command reboot "xterm -e doas reboot"
+command top "xterm -e top -s 0.6"
+command termbar "xterm -name termbar -class termbar -T termbar -e ~/.scripts/termbar"
