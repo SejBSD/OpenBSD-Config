@@ -11,7 +11,6 @@ purplef="${esc}[35m"
 core() {
 	DATE=$(date '+%H:%M:%S %d.%m.%Y')
 	DESKTOP_ID=$(xprop -root 32c '\t$0' _NET_CURRENT_DESKTOP | cut -f 2)
-    GAMMA=$(xgamma)
 	NAME=${LOGNAME}
 	MEM=$(top -n | grep Memory | awk {'print $6'})
 	SSID=$(ifconfig | grep join | sed -e 's/.*join\(.*\)chan.*/\1/')
@@ -26,7 +25,7 @@ while true; do
     core
 
     BUFFER="[${cyanf}${DATE}${reset}]\n"
-    BUFFER="${BUFFER}${cyanf}Desktop:${reset} [${DESKTOP_ID}][${GAMMA}]\n"
+    BUFFER="${BUFFER}${cyanf}Desktop:${reset} [${DESKTOP_ID}]\n"
     BUFFER="${BUFFER}${cyanf}User:${reset} ${NAME}\n"
     BUFFER="${BUFFER}${cyanf}Memory:${reset} ${MEM}\n"
     BUFFER="${BUFFER}${cyanf}Wi-Fi:${reset} ${SSID:-NONE}\n"
