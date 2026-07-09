@@ -130,7 +130,6 @@ bind-mouse 4-3 window-resize
 command xterm "xterm"
 command xkill "xkill"
 command xlock "xlock -mode random"
-command update "xterm -e ~/.scripts/update"
 command top "xterm -e top -s 0.6"
 command termbar "xterm -name termbar -class termbar -T termbar -e ~/.scripts/termbar"
 command systat "xterm -e systat"
