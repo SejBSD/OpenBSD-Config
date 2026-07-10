@@ -1,0 +1,6 @@
+doas pkg_add \
+    git jq yq \
+    python \
+    fzf ripgrep fd \
+    nmap \
+    kubectl
