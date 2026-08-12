@@ -5,6 +5,10 @@
 PATH=$HOME/bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/X11R6/bin:/usr/local/bin:/usr/local/sbin
 export PATH HOME TERM
 
-PS1='┌──(${LOGNAME}@$(hostname -s))-[$(pwd)]\n└─$ '
+get_git_branch() {
+  git symbolic-ref HEAD 2>/dev/null | awk '{print "-[git:" $1 "]"}'
+}
+
+PS1=`┌──(${LOGNAME}@$(hostname -s))-[$(pwd)]$(get_git_branch)\n└─$ `
 
 alias ll="ls -al"
