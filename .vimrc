@@ -50,3 +50,7 @@ nnoremap ff :execute 'vimgrep /' . expand('<cword>') . '/j ' . substitute(&path,
 nnoremap ]f :cnext<CR>
 nnoremap [f :cprev<CR>
 nnoremap []f :cclose<CR>
+
+command! MakeTags !find / -name '*.[chpyrs]' -exec ctags -a {} +
+
+nnoremap tt :execute "tag " . expand("<cword>")<CR>
