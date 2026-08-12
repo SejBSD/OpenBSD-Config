@@ -51,6 +51,6 @@ nnoremap ]f :cnext<CR>
 nnoremap [f :cprev<CR>
 nnoremap []f :cclose<CR>
 
-command! MakeTags !find / -name '*.[chpyrs]' -exec ctags -a {} +
+command! MakeTags !find / -type f \( -name '.[ch]' -o -name '.cpp' -o -name '.hpp' -o -name '.py' -o -name '.rs' -o -name '.rb' -o -name '.cs' -o -name '.html' -o -name '.css' -o -name '.js' \) -exec ctags -a {} +
 
 nnoremap tt :execute "tag " . expand("<cword>")<CR>
