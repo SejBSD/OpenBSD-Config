@@ -49,7 +49,7 @@ set completeopt=menuone,noinsert,noselect
 nnoremap ff :execute 'vimgrep /' . expand('<cword>') . '/j ' . substitute(&path, ',', ' ', 'g')<CR>:copen<CR>
 nnoremap ]] :cnext<CR>
 nnoremap [[ :cprev<CR>
-nnoremap ll :clist<CR>
+nnoremap cl :clist<CR>
 nnoremap [] :cclose<CR>
 
 command! MakeTags !find / -type f \( -name '.[ch]' -o -name '.cpp' -o -name '.hpp' -o -name '.py' -o -name '.rs' -o -name '.rb' -o -name '.cs' -o -name '.html' -o -name '.css' -o -name '.js' \) -exec ctags -a {} +
