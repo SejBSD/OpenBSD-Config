@@ -39,5 +39,8 @@ let g:netrw_liststyle=3
 nnoremap <C-e> :Lexplore<CR>
 
 set path+=**
+set path+=~/**
 set path+=/usr/include/**
 set path+=/usr/local/include/**
+
+set completeopt=menuone,noinsert,noselect
