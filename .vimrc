@@ -45,3 +45,8 @@ set path+=/usr/include/**
 set path+=/usr/local/include/**
 
 set completeopt=menuone,noinsert,noselect
+
+nnoremap ff :execute 'vimgrep /' . expand('<cword>') . '/j ' . substitute(&path, ',', ' ', 'g')<CR>:copen<CR>
+nnoremap ]f :cnext<CR>
+nnoremap [f :cprev<CR>
+nnoremap []f :cclose<CR>
