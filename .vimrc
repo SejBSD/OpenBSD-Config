@@ -33,4 +33,5 @@ set updatetime=50
 set splitbelow
 set splitright
 
+let g:netrw_liststyle=3
 nnoremap <C-e> :Lexplore<CR>
