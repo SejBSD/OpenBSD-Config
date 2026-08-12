@@ -32,3 +32,5 @@ set updatetime=50
 
 set splitbelow
 set splitright
+
+nnoremap <C-e> :Lexplore<CR>
