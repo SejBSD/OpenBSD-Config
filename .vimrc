@@ -37,6 +37,7 @@ set splitright
 
 let g:netrw_liststyle=3
 nnoremap <C-e> :Lexplore<CR>
+nnoremap <C-t> :botright terminal<CR>
 
 set path+=**
 set path+=~/**
