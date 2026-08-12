@@ -5,6 +5,6 @@
 PATH=$HOME/bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/X11R6/bin:/usr/local/bin:/usr/local/sbin
 export PATH HOME TERM
 
-PS1='${LOGNAME}@$(hostname -s):$(pwd)$ '
+PS1='┌──(${LOGNAME}@$(hostname -s))-[$(pwd)]\n└─$ '
 
 alias ll="ls -al"
