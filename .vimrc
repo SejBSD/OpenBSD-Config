@@ -5,6 +5,7 @@ set t_Co=256
 set background=dark
 
 set number
+set relativenumber
 set cursorline
 set colorcolumn=80
 set signcolumn=yes
