@@ -55,3 +55,6 @@ nnoremap [] :cclose<CR>
 command! MakeTags !find / -type f \( -name '.[ch]' -o -name '.cpp' -o -name '.hpp' -o -name '.py' -o -name '.rs' -o -name '.rb' -o -name '.cs' -o -name '.html' -o -name '.css' -o -name '.js' \) -exec ctags -a {} +
 
 nnoremap tt :execute "tag " . expand("<cword>")<CR>
+
+highlight StatusLine   cterm=NONE gui=NONE ctermbg=NONE guibg=NONE ctermfg=NONE guifg=NONE
+highlight StatusLineNC cterm=NONE gui=NONE ctermbg=NONE guibg=NONE ctermfg=NONE guifg=NONE
