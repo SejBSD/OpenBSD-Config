@@ -9,6 +9,6 @@ get_git_branch() {
   git symbolic-ref HEAD 2>/dev/null | awk '{print "-[git:" $1 "]"}'
 }
 
-PS1='┌──(${LOGNAME}@$(hostname -s))-[$(pwd)]'$(get_git_branch)'\n└─$ '
+PS1='┌──(${LOGNAME}@$(hostname -s))-[$(pwd)]$(get_git_branch)\n└─$ '
 
 alias ll="ls -al"
